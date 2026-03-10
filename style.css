@@ -82,7 +82,6 @@ header {
     background: #e76c1f;
     height: 60px;
     width: auto;
-    gap: 120px;
     display: flex;
     align-items: center;
 }

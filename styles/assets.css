@@ -21,11 +21,21 @@
     width: auto;
     padding-bottom: 40px;
     margin-left: 180px;
+    margin-right: 120px; /* Abstand zum Text */
 }
 
 .burrito_icon {
      height: 200px;
     width: auto;
     padding-bottom: 80px;
-    margin-left: 130px;
+    margin-left: 150px;
+    margin-right: 100px; /* Abstand zum Text */
+}
+
+.dessert_icon {
+     height: 180px;
+    width: auto;
+    padding-bottom: 40px;
+    margin-left: 160px;
+    margin-right: 120px; /* Abstand zum Text */
 }
