@@ -27,4 +27,13 @@ header {
   height: 70dvh;
   background-size: cover;
   background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+.restaurant_logo {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    margin-top: 500px;
 }
