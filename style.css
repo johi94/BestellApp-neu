@@ -27,13 +27,36 @@ header {
   height: 70dvh;
   background-size: cover;
   background-position: center;
-  display: flex;
-  justify-content: center;
+}
+
+.restaurant_logo_section {
+    display: flex;
+    justify-content: center;
+    margin-top: -150px;
 }
 
 .restaurant_logo {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    margin-top: 500px;
+}
+
+.restaurant_name_and_decription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 24px;
+}
+
+.restaurant_name_and_reviews {
+    display: flex;
+    gap: 24px;
+}
+
+.reviews {
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
 }
