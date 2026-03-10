@@ -17,3 +17,14 @@ header {
     width: auto;
     margin: 16px;
 }
+
+.bestell_app_menu_icon:hover {
+    cursor: pointer;
+}
+
+.cover_photo {
+  background-image: url("./assets/img/mexican_restaurant.png");
+  height: 70dvh;
+  background-size: cover;
+  background-position: center;
+}
