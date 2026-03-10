@@ -1,25 +1,25 @@
 header {
-    background: #e76c1f;
-    height: 10dvh;
-    width: auto;
-    display: flex;
-    justify-content: space-between;
+  background: #e76c1f;
+  height: 10dvh;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .bestell_app_icon {
-    height: 80px;
-    width: auto;
-    margin: 16px;
+  height: 80px;
+  width: auto;
+  margin: 16px;
 }
 
 .bestell_app_menu_icon {
-    height: 80px;
-    width: auto;
-    margin: 16px;
+  height: 80px;
+  width: auto;
+  margin: 16px;
 }
 
 .bestell_app_menu_icon:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .cover_photo {
@@ -30,33 +30,63 @@ header {
 }
 
 .restaurant_logo_section {
-    display: flex;
-    justify-content: center;
-    margin-top: -150px;
+  display: flex;
+  justify-content: center;
+  margin-top: -150px;
 }
 
 .restaurant_logo {
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
 }
 
 .restaurant_name_and_decription {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 24px;
 }
 
 .restaurant_name_and_reviews {
-    display: flex;
-    gap: 24px;
+  display: flex;
+  gap: 24px;
 }
 
 .reviews {
-     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: rgba(231, 108, 31, 0.4);
+  margin-top: 18px; /* gleiche Höhe wie h1 */
+  height: 45px; /* Umrandung des Stern und review Bereichs */
+  width: 180px;
+  border-radius: 20px;
+}
+
+.review_star {
+  margin-bottom: 4px; /* Höhe anpepasst mit reviews */
+}
+
+/*  */
+
+.review_points {
+  margin-top: 4px; /* für gleiche Höhe wie Stern */
+  margin-bottom: 4px;
+}
+
+.review_comments {
+  margin-top: 4px; /* für gleiche Höhe wie Stern */
+  margin-bottom: 6px;
+  color: gray;
+}
+
+.reviews:hover {
+  cursor: pointer;
+}
+
+.restaurand_description {
+    padding-top: 16px;
 }

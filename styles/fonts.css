@@ -3,3 +3,25 @@
 * {
       font-family: "Montserrat", sans-serif;
 }
+
+h1 {
+      font-size: 60px;
+      font-weight: 700;
+}
+
+.review_star {
+      font-size: 40px;
+}
+
+.review_points {
+      font-size: 35px;
+}
+
+.review_comments {
+      font-size: 25px;
+}
+
+.restaurand_description {
+      font-size: 40px;
+      font-weight: 300px;
+}
