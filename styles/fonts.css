@@ -5,7 +5,7 @@
 }
 
 h1 {
-      font-size: 60px;
+      font-size: 70px;
       font-weight: 700;
 }
 
@@ -22,6 +22,12 @@ h1 {
 }
 
 .restaurand_description {
-      font-size: 40px;
-      font-weight: 300px;
+      font-size: 50px;
+      font-weight: 500;
+}
+
+h2 {
+      font-size: 45px;
+      color: white;
+      font-weight: 300;
 }
