@@ -1,1 +1,17 @@
-/* Für Buttons */
+/* Für Buttons/ icons, usw. */
+
+.bestell_app_icon {
+  height: 80px;
+  width: auto;
+  margin: 16px;
+}
+
+.bestell_app_menu_icon {
+  height: 80px;
+  width: auto;
+  margin: 16px;
+}
+
+.bestell_app_menu_icon:hover {
+  cursor: pointer;
+}
