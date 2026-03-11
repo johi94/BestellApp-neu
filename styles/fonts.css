@@ -9,6 +9,18 @@ h1 {
       font-weight: 700;
 }
 
+h2 {
+       color: white;
+      font-size: 50px;
+      font-weight: 500;
+}
+
+h5 {
+      color: white;
+      font-size: 30px;
+      font-weight: 300;
+}
+
 .review_star {
       font-size: 40px;
 }
@@ -22,12 +34,7 @@ h1 {
 }
 
 .restaurand_description {
-      font-size: 50px;
+      font-size: 30px;
       font-weight: 500;
 }
 
-h2 {
-      font-size: 45px;
-      color: white;
-      font-weight: 300;
-}
