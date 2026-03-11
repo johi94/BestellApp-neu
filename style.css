@@ -6,6 +6,10 @@ header {
   justify-content: space-between;
 }
 
+main {
+    flex: 1;
+}
+
 .cover_photo {
   background-image: url("./assets/img/mexican_restaurant.png");
   height: 70dvh;
@@ -84,6 +88,13 @@ header {
     width: auto;
     display: flex;
     align-items: center;
+}
+
+footer {
+  background: #e76c1f;
+  height: 10dvh;
+  width: auto;
+  display: flex;
 }
 
 /*  */
