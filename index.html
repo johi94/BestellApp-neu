@@ -13,13 +13,14 @@
     <script src="./script.js" defer></script>
     <script src="./scripts/database.js" defer></script>
     <script src="./scripts/templates.js" defer></script>
+    <link rel="shortcut icon" href="./assets/img/restaurant_logo_1.jpg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./styles/standard.css">
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/assets.css">
     <link rel="stylesheet" href="./styles/basket.css">
   </head>
-  <body>
+  <body onload="renderMyDishes()">  <!-- um Gerichte beim laden des Websitebodys auf der Website anzuzeigen -->
     <header>
         <img class="bestell_app_icon" src="./assets/icons/Capa 1.png" alt="BestellApp Icon">
         <img class="bestell_app_menu_icon" src="./assets/icons/menu_stripes_header.svg" alt="BestellApp Menü Icon" >
@@ -41,13 +42,13 @@
   <section class="menu_meals_and_dishes_wrapper"> <!-- Wrapper für Kategorien der Gerichte und die Gerichte -->
 <section class="menu_section">
    <div class="meals"><img class="taco_icon" src="./assets/icons/taco_icon.svg" alt="Taco Icon"><h2>Tacos</h2></div>
-   <div id="dishes">
+   <div id="content">
    </div>
    <div class="meals"><img class="burrito_icon" src="./assets/icons/burrito_icon.svg" alt="Burrito Icon"><h2>Burritos</h2></div>
-   <div id="dishes">
+   <div id="content">
    </div>
    <div class="meals"><img class="dessert_icon" src="./assets/icons/dessert_icon.svg" alt="Dessert Icon"><h2>Desserts</h2></div>
-   <div id="dishes">
+   <div id="content">
    </div>
 </section>
 </section> <!-- Wrapper für Kategorien der Gerichte und die Gerichte -->

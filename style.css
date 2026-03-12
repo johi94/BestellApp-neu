@@ -91,6 +91,11 @@ main {
     border-radius: 20px;
 }
 
+/* Klasse aus HTML-Template-Funktion um Gerichte auf Website anzeigen zu lassen */
+.dishes {
+  background: red;
+}
+
 footer {
   background: #e76c1f;
   height: 10dvh;
@@ -99,5 +104,6 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
 
 /*  */
