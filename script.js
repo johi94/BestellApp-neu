@@ -3,7 +3,7 @@
 // #start region render-function
 
 function renderMyDishes() {
-    let dishesRef = document.getElementById('content');
+    let dishesRef = document.getElementById('content_taco');
     dishesRef.innerHTML = "";
     for (indexMyDishes = 0; indexMyDishes < myDishes.length; indexMyDishes++) {
         dishesRef.innerHTML += getDishesTemplate(indexMyDishes)
