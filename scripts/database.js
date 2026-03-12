@@ -3,7 +3,7 @@ const myDishes = [
         "image" : "./assets/img/tacos_al_pastor_compressed.jpg",
         "name" : "Tacos al Pastor",
         "price" : 8.9,
-        "description" : "Marinated pork, topped with sweet pineapple, fresh cilantro, and chopped onion."
+        "description" : "Marinated pork seasoned with dried chilies, spices, and pineapple, slow-roasted for a rich, savory flavor. Served on warm corn tortillas and topped with sweet pineapple, fresh cilantro, and chopped onion. Finished with a squeeze of fresh lime for a bright, balanced taste."
     },
       {
         "image" : "./assets/img/tacos_asada_compressed.jpg",

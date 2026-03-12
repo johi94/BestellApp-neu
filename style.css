@@ -91,6 +91,14 @@ main {
   border-radius: 20px;
 }
 
+h2 {
+  color: white;
+}
+
+h4 {
+  color: white;
+}
+
 /* Klasse aus HTML-Template-Funktion um Gerichte auf Website anzeigen zu lassen */
 .dishes {
   background: rgb(253, 234, 220);
@@ -105,6 +113,26 @@ main {
   border-radius: 20px;
 }
 
+.space_between {
+ display: flex;
+ justify-content: space-between;
+ width: 100%; /* um vollen Platz im Container zu nutzen */
+}
+
+.name_description {
+ margin: 16px;
+ display: flex;
+ flex-direction: column;
+}
+
+.price_btn_dishes {
+   margin: 16px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ flex-direction: column;
+}
+
 footer {
   background: #e76c1f;
   height: 10dvh;
@@ -112,6 +140,10 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.copyright_footer {
+  color: white;
 }
 
 /*  */
