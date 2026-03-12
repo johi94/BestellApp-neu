@@ -1,7 +1,7 @@
 /* Style für alles was eine Schriftgröße bekommt */
 
 * {
-      font-family: "Montserrat", sans-serif;
+      font-family: "Roboto Slab", serif;
 }
 
 h1 {
@@ -47,6 +47,11 @@ font-weight: 300;
 .dish_description {
       font-size: 25px;
       font-weight: 300;
+}
+
+.dish_price {
+      font-size: 30px;
+      font-weight: 400;
 }
 
 .copyright_footer {

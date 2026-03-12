@@ -11,7 +11,7 @@ function getDishesTemplate(indexMyDishes) {
 <p class="dish_description">${dish.description}</p>
 </div>
 <div class="price_btn_dishes">
-<p>${dish.price}</p>
+<p class="dish_price">${dish.price}</p>
 <button class="add-to-basket-btn">Add to basket</button>
 </div>
 </div>
