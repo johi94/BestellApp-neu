@@ -1,11 +1,13 @@
 // Alle Funktionen mit HTML
 
-function getDishesTemplate() {
+function getDishesTemplate(indexMyDishes) {
+
+  const dish = myDishes[indexMyDishes];
+
   return /*html*/ `<article class="dishes">
-<h3>${myDishes.name}</h3>
-<img src="${myDishes.image}" alt="Cover von ${myDishes.name}" class="book-img" />
-${myDishes.filter((name) => {
-  return name;
-})};
+  <img src="${dish.image}" alt="Cover von ${dish.name}" class="dish-img" />
+<h3>${dish.name}</h3>
+<p>${dish.description}</p>
+<p>${dish.price}</p>
 </article>`;
-};
+}
