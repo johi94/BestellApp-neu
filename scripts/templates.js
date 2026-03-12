@@ -9,5 +9,6 @@ function getDishesTemplate(indexMyDishes) {
 <h3>${dish.name}</h3>
 <p>${dish.description}</p>
 <p>${dish.price}</p>
+<button class="add-to-basket-btn">Add to basket</button>
 </article>`;
 }
