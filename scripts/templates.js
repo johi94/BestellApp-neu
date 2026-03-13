@@ -20,10 +20,10 @@ function getDishesTemplate(indexMyDishes) {
 
 function getBasketTemplate(indexmyBasket) {
 
-  const basket = myBasket[indexmyBasket];
+  const basketdish = myBasket[indexmyBasket];
   return /*html*/ `<article class="dishes_basket">
-  <h3>${basket.name}</h3>
-  <p class="dish_price">${basket.price.toFixed(2).replace(".", ",")} €</p>
+  <h3 class="basket_dish_name">${basketdish.name}</h3>
+  <p class="basket_dish_price">${basketdish.price.toFixed(2).replace(".", ",")} €</p>
   <button class="add_one_dish">+</button>
   <button class="remove_one_dish">-</button>
   <button class="delete_dish_from_basket">Delete</button>

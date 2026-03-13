@@ -5,20 +5,26 @@
 }
 
 h1 {
-      font-size: 70px;
+      font-size: 80px;
       font-weight: 700;
 }
 
 /* Überschrift Gerichtemenü */
 h2 {
-      font-size: 50px;
+      font-size: 60px;
       font-weight: 500;
 }
 
 /* Überschrift Gerichte Tacos, Burritos, Desserts */
 h3 {
-      font-size: 40px;
+      font-size: 50px;
       font-weight: 400;
+}
+
+/* h3 im Warenkorb Überschrift der Gerichte */
+.basket_dish_name { 
+font-size: 30px;
+font-weight: 300;
 }
 
 /* Überschrift Warenkorb */
@@ -64,4 +70,7 @@ font-weight: 300;
       font-weight: 300;
 }
 
+.basket_dish_price {
+      font-size: 25px;
+}
 /*  */

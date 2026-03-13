@@ -31,8 +31,25 @@ width: calc(100% - 450px);
     top: 0; /* Position ab der Warenkorb an der Seite klebt */
 }
 
+#content_basket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 h4 {
+    color: antiquewhite;
     padding-top: 16px;
+}
+
+/* Hier werden die Gerichte angezeigt, welche in den Warenkorb geladen wurden, selber Hintergrund wie im Menü */
+.dishes_basket {
+    background: rgb(253, 234, 220);
+    height: 150px;
+    width: 400px;
+    margin: 16px;
+    padding: 16px;
 }
 
 /*  */
