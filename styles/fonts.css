@@ -21,12 +21,6 @@ h3 {
       font-weight: 400;
 }
 
-/* h3 im Warenkorb Überschrift der Gerichte */
-.basket_dish_name { 
-font-size: 30px;
-font-weight: 300;
-}
-
 /* Überschrift Warenkorb */
 h4 {
 font-size: 35px;
@@ -46,12 +40,12 @@ font-weight: 300;
 }
 
 .restaurant_description {
-      font-size: 30px;
+      font-size: 40px;
       font-weight: 500;
 }
 
 .dish_description {
-      font-size: 25px;
+      font-size: 30px;
       font-weight: 300;
 }
 
@@ -65,12 +59,21 @@ font-weight: 300;
       font-weight: 400;
 }
 
+/* h3 im Warenkorb Überschrift der Gerichte */
+.basket_dish_name { 
+font-size: 35px;
+font-weight: 400;
+}
+
+.basket_dish_price {
+      font-size: 30px;
+      font-weight: 400;
+}
+
 .copyright_footer {
       font-size: 30px;
       font-weight: 300;
 }
 
-.basket_dish_price {
-      font-size: 25px;
-}
+
 /*  */

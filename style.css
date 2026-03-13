@@ -48,7 +48,7 @@ main {
   align-items: center;
   gap: 8px;
   background: rgba(231, 108, 31, 0.4);
-  margin-top: 18px; /* gleiche Höhe wie h1 */
+  margin-top: 38px; /* gleiche Höhe wie h1 */
   height: 45px; /* Umrandung des Stern und review Bereichs */
   width: 180px;
   border-radius: 20px;

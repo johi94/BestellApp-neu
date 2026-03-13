@@ -1,7 +1,6 @@
 // Alle Funktionen mit HTML
 
 function getDishesTemplate(indexMyDishes) {
-
   const dish = myDishes[indexMyDishes];
   return /*html*/ `<article class="dishes">
   <img src="${dish.image}" alt="Cover von ${dish.name}" class="dish-img" />
@@ -19,13 +18,12 @@ function getDishesTemplate(indexMyDishes) {
 }
 
 function getBasketTemplate(indexmyBasket) {
-
   const basketdish = myBasket[indexmyBasket];
   return /*html*/ `<article class="dishes_basket">
   <h3 class="basket_dish_name">${basketdish.name}</h3>
-  <p class="basket_dish_price">${basketdish.price.toFixed(2).replace(".", ",")} €</p>
-  <button class="add_one_dish">+</button>
   <button class="remove_one_dish">-</button>
+  <button class="add_one_dish">+</button>
   <button class="delete_dish_from_basket">Delete</button>
-  </article>`
+  <p class="basket_dish_price">${basketdish.price.toFixed(2).replace(".", ",")} €</p>
+  </article>`;
 }
