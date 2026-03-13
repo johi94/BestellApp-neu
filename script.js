@@ -37,10 +37,11 @@ function renderMyDishes() {
 
 // #start region dish to basket / basket
 
-function dishToBasket() {
-  let basketDish = myDishes.splice(indexMyDishes, 1);
-  myBasket.push(basketDish[0]);
-  renderMyDishes();
+function dishToBasket(indexMyDishes) {
+  let basketDish = myDishes[indexMyDishes];
+  myBasket.push(basketDish);
+
+  renderBasketDishes();
 }
 
 function renderBasketDishes() {
@@ -54,3 +55,6 @@ function renderBasketDishes() {
     basketDishesRef.innerHTML += getBasketTemplate(indexmyBasket);
   }
 }
+
+
+// #end region dish to basket / basket
