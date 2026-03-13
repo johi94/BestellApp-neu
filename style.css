@@ -71,6 +71,7 @@ main {
 
 .reviews:hover {
   cursor: pointer;
+  filter: drop-shadow(0px 0px 4px rgba(231, 108, 31, 0.4));
 }
 
 .restaurand_description {
@@ -136,10 +137,6 @@ h4 {
  align-items: center;
  justify-content: space-between;
  flex-direction: column;
-}
-
-.add-to-basket-btn {
-  
 }
 
 footer {

@@ -39,3 +39,17 @@
     margin-left: 160px;
     margin-right: 120px; /* Abstand zum Text */
 }
+
+.add-to-basket-btn {
+  height: 40px;
+  width: 150px;
+  border-radius: 20px;
+  border-width: 4px;
+  border-color: rgb(54, 53, 52);
+  border-style: solid;
+}
+
+.add-to-basket-btn:hover {
+  cursor: pointer;
+  
+}
