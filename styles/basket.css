@@ -53,6 +53,12 @@ h4 {
     border-radius: 20px;
 }
 
-
+/* Buttons und Preis im Warenkorb auf gleicher Höhe */
+.basket_btns_price {
+    display: flex;
+    justify-content: center;
+    margin: 16px;
+    gap: 8px;
+}
 
 /*  */
