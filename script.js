@@ -48,13 +48,20 @@ function renderBasketDishes() {
   let basketDishesRef = document.getElementById("content_basket");
   basketDishesRef.innerHTML = "";
   for (
-    let indexmyBasket = 0;
-    indexmyBasket < myBasket.length;
-    indexmyBasket++
+    let indexMyBasket = 0;
+    indexMyBasket < myBasket.length;
+    indexMyBasket++
   ) {
-    basketDishesRef.innerHTML += getBasketTemplate(indexmyBasket);
+    basketDishesRef.innerHTML += getBasketTemplate(indexMyBasket);
   }
 }
 
 
 // #end region dish to basket / basket
+
+// #start region delete / add/ remove dish
+
+function deleteDishFromBasket(indexMyBasket) {
+myBasket.splice(indexMyBasket,1);
+renderBasketDishes();
+}

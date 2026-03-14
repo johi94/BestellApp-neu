@@ -17,15 +17,15 @@ function getDishesTemplate(indexMyDishes) {
 </article>`;
 }
 
-function getBasketTemplate(indexmyBasket) {
-  const basketdish = myBasket[indexmyBasket];
+function getBasketTemplate(indexMyBasket) {
+  const basketdish = myBasket[indexMyBasket];
   return /*html*/ `<article class="dishes_basket">
   <h3 class="basket_dish_name">${basketdish.name}</h3>
   <div class="basket_btns_price">
   <button class="basket_btn">-</button>
   <button class="basket_btn">+</button>
   <div class="basket_delete_price">
-  <button class="basket_delete_btn">&#x1F5D1</button>
+  <button onclick="deleteDishFromBasket()" class="basket_delete_btn">&#x1F5D1</button>
   <p class="basket_dish_price">${basketdish.price.toFixed(2).replace(".", ",")} €</p>
   </div>
   </div>
