@@ -22,10 +22,10 @@ function getBasketTemplate(indexmyBasket) {
   return /*html*/ `<article class="dishes_basket">
   <h3 class="basket_dish_name">${basketdish.name}</h3>
   <div class="basket_btns_price">
-  <button class="remove_one_dish">-</button>
-  <button class="add_one_dish">+</button>
+  <button class="basket_btn">-</button>
+  <button class="basket_btn">+</button>
   <div class="basket_delete_price">
-  <button class="delete_dish_from_basket">Delete</button>
+  <button class="basket_delete_btn">&#x1F5D1</button>
   <p class="basket_dish_price">${basketdish.price.toFixed(2).replace(".", ",")} €</p>
   </div>
   </div>
