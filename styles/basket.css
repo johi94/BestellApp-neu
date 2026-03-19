@@ -29,13 +29,17 @@
   margin-top: 40px; /* auf gleicher Höhe wie .meals Container der Gerichtüberschrift */
   position: sticky; /* Warenkorb klebt an der Seite / bewegt sich beim scrollen mit */
   top: 0; /* Position ab der Warenkorb an der Seite klebt */
+  display: flex;
+  flex-direction: column;
 }
 
 #content_basket {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  flex: 1; /* Inhalt im Warenkorb nimmt sich den verfügbaren Platz  */
+  overflow-y: auto; /* erzeugt eine Scrollbar für den Inhalt im Warenkorb */
 }
 
 h4 {
@@ -47,7 +51,7 @@ h4 {
 .dishes_basket {
   background: rgb(253, 234, 220);
   height: 150px;
-  width: 420px;
+  width: 418px;
   margin: 16px;
   padding: 16px;
   border-radius: 20px;
@@ -75,6 +79,6 @@ h4 {
 }
 
 #dishes_sum {
-    color: antiquewhite;
+  color: antiquewhite;
 }
 /*  */
