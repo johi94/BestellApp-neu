@@ -1,6 +1,5 @@
 // Funktion um Gerichte auf website zu rendern
 
-// #start region renderMyDishes
 
 let tacosRef = document.getElementById("content_taco");
 let burritosRef = document.getElementById("content_burrito");
@@ -33,7 +32,6 @@ function renderMyDishes() {
   }
 }
 
-// #end region renderMyDishes
 
 // #start region dish to basket / basket
 
@@ -67,6 +65,15 @@ function renderBasketDishes() {
   ) {
     basketDishesRef.innerHTML += getBasketTemplate(indexMyBasket);
   }
+
+  renderDishSum();
+}
+
+function renderDishSum() {
+  let sumRef = document.getElementById("dishes_sum");
+  let sum = calculateDishSum();
+
+  sumRef.innerHTML = /*html*/ `${sum.toFixed(2).replace(".", ",")} €`;
 }
 
 // #end region dish to basket / basket
