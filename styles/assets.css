@@ -78,3 +78,17 @@
 .basket_delete_btn:hover {
   cursor: pointer;
 }
+
+#buy_now_btn {
+  background: #e76c1f;
+  color: antiquewhite;
+  padding-bottom: 6px;
+  margin: 16px;
+  height: 60px;
+  width: auto;
+  border-radius: 20px;
+}
+
+#buy_now_btn:hover {
+  cursor: pointer;
+}
