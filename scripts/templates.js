@@ -1,6 +1,5 @@
 // Alle Funktionen mit HTML
 
-
 function getDishesTemplate(indexMyDishes) {
   const dish = myDishes[indexMyDishes];
   return /*html*/ `<article class="dishes">
@@ -32,6 +31,32 @@ function getBasketTemplate(indexMyBasket) {
   </div>
   </article>`;
 }
-// (basketdish.price * basketdish.amount) Preis und Anzahl werden zusammengerechnet um die Summe zu erhalten, 
+
+function deliveryCosts() {
+  const deliveryRef = document.getElementById("delivery_cost");
+  const sum = calculateDishSum();
+
+  let delivery = 0;
+
+  if (sum < 20 && sum > 0) {
+    delivery = 5;
+  }
+
+  deliveryRef.innerHTML = /*html*/ `
+    Delivery fee: ${delivery.toFixed(2).replace(".", ",")} €
+  `;
+
+  return delivery;
+}
+
+function renderDishSum() {
+  const sumRef = document.getElementById("dishes_sum");
+  const dishesSum = calculateDishSum();
+  const delivery = deliveryCosts();
+
+  const sum = dishesSum + delivery;
+
+  sumRef.innerHTML = /*html*/ `Total: ${sum.toFixed(2).replace(".", ",")} €`;
+}
+// (basketdish.price * basketdish.amount) Preis und Anzahl werden zusammengerechnet um die Summe zu erhalten,
 // wenn Artikel mehrfach im Warenkorb liegen
- 

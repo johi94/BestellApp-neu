@@ -1,6 +1,5 @@
 // Funktion um Gerichte auf website zu rendern
 
-
 let tacosRef = document.getElementById("content_taco");
 let burritosRef = document.getElementById("content_burrito");
 let dessertsRef = document.getElementById("content_dessert");
@@ -32,31 +31,30 @@ function renderMyDishes() {
   }
 }
 
-
 // #start region dish to basket / basket
 
 function dishToBasket(indexMyDishes) {
-  let dish = myDishes[indexMyDishes];
+  const dish = myDishes[indexMyDishes];
 
   // Prüfen on Gericht im Warenkorb ist, um dieses dann zu erhöhen
 
-  let dishExist = myBasket.find((content) => content.name === dish.name);
+  const dishExist = myBasket.find((content) => content.name === dish.name);
 
-if (dishExist) {
-  dishExist.amount++;
-} else {
-  let basketDish = {
-    ...dish,
-    amount: 1
-  };
-  myBasket.push(basketDish);
-}
+  if (dishExist) {
+    dishExist.amount++;
+  } else {
+    let basketDish = {
+      ...dish,
+      amount: 1,
+    };
+    myBasket.push(basketDish);
+  }
 
   renderBasketDishes();
 }
 
 function renderBasketDishes() {
-  let basketDishesRef = document.getElementById("content_basket");
+  const basketDishesRef = document.getElementById("content_basket");
   basketDishesRef.innerHTML = "";
   for (
     let indexMyBasket = 0;
@@ -67,13 +65,6 @@ function renderBasketDishes() {
   }
 
   renderDishSum();
-}
-
-function renderDishSum() {
-  let sumRef = document.getElementById("dishes_sum");
-  let sum = calculateDishSum();
-
-  sumRef.innerHTML = /*html*/ `Total: ${sum.toFixed(2).replace(".", ",")} €`;
 }
 
 // #end region dish to basket / basket
@@ -87,16 +78,22 @@ function removeDishFromBasket(indexMyBasket) {
     myBasket.splice(indexMyBasket, 1);
   }
   renderBasketDishes();
+  renderDishSum();
+  deliveryCosts();
 }
 
 function addDishToBasket(indexMyBasket) {
   myBasket[indexMyBasket].amount++;
   renderBasketDishes();
+  renderDishSum();
+  deliveryCosts();
 }
 
 function deleteDishFromBasket(indexMyBasket) {
   myBasket.splice(indexMyBasket, 1);
   renderBasketDishes();
+  renderDishSum();
+  deliveryCosts();
 }
 
 // #end region delete/ add/ remove dish
@@ -106,7 +103,11 @@ function deleteDishFromBasket(indexMyBasket) {
 function calculateDishSum() {
   let sum = 0;
 
-  for (let indexMyBasket = 0; indexMyBasket < myBasket.length; indexMyBasket++) {
+  for (
+    let indexMyBasket = 0;
+    indexMyBasket < myBasket.length;
+    indexMyBasket++
+  ) {
     sum += myBasket[indexMyBasket].price * myBasket[indexMyBasket].amount;
   }
 
