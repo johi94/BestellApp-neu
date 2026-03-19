@@ -20,7 +20,7 @@ function getDishesTemplate(indexMyDishes) {
 function getBasketTemplate(indexMyBasket) {
   const basketdish = myBasket[indexMyBasket];
   return /*html*/ `<article class="dishes_basket">
-  <h3 class="basket_dish_name">${basketdish.name}</h3>
+  <h3 class="basket_dish_name">${basketdish.amount}x ${basketdish.name}</h3>
   <div class="basket_btns_price">
   <button onclick="removeDishFromBasket()" class="basket_btn">-</button>
   <button onclick="addDishToBasket()" class="basket_btn">+</button>
