@@ -71,7 +71,7 @@ function renderBasketDishes() {
 
 // #end region dish to basket / basket
 
-// #start region delete / add/ remove dish
+// #start region delete/ add/ remove dish
 
 function removeDishFromBasket(indexMyBasket) {
   if (myBasket[indexMyBasket].amount > 1) {
@@ -90,4 +90,18 @@ function addDishToBasket(indexMyBasket) {
 function deleteDishFromBasket(indexMyBasket) {
   myBasket.splice(indexMyBasket, 1);
   renderBasketDishes();
+}
+
+// #end region delete/ add/ remove dish
+
+// #start region calculate price
+
+function calculateDishSum() {
+  let sum = 0;
+
+  for (let indexMyBasket = 0; indexMyBasket < myBasket.length; indexMyBasket++) {
+    sum += myBasket[indexMyBasket].price * myBasket[indexMyBasket].amount;
+  }
+
+  return sum;
 }

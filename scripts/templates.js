@@ -1,5 +1,6 @@
 // Alle Funktionen mit HTML
 
+
 function getDishesTemplate(indexMyDishes) {
   const dish = myDishes[indexMyDishes];
   return /*html*/ `<article class="dishes">
@@ -25,9 +26,12 @@ function getBasketTemplate(indexMyBasket) {
   <button onclick="removeDishFromBasket(${indexMyBasket})" class="basket_btn">-</button>
   <button onclick="addDishToBasket(${indexMyBasket})" class="basket_btn">+</button>
   <div class="basket_delete_price">
-  <button onclick="deleteDishFromBasket(${indexMyBasket})" class="basket_delete_btn">&#x1F5D1</button>
+  <button onclick="deleteDishFromBasket(${indexMyBasket})" class="basket_delete_btn">&#x1F5D1</button> 
   <p class="basket_dish_price">${(basketdish.price * basketdish.amount).toFixed(2).replace(".", ",")} €</p>
   </div>
   </div>
   </article>`;
 }
+// (basketdish.price * basketdish.amount) Preis und Anzahl werden zusammengerechnet um die Summe zu erhalten, 
+// wenn Artikel mehrfach im Warenkorb liegen
+ 
