@@ -22,11 +22,11 @@ function getBasketTemplate(indexMyBasket) {
   return /*html*/ `<article class="dishes_basket">
   <h3 class="basket_dish_name">${basketdish.amount}x ${basketdish.name}</h3>
   <div class="basket_btns_price">
-  <button onclick="removeDishFromBasket()" class="basket_btn">-</button>
-  <button onclick="addDishToBasket()" class="basket_btn">+</button>
+  <button onclick="removeDishFromBasket(${indexMyBasket})" class="basket_btn">-</button>
+  <button onclick="addDishToBasket(${indexMyBasket})" class="basket_btn">+</button>
   <div class="basket_delete_price">
   <button onclick="deleteDishFromBasket(${indexMyBasket})" class="basket_delete_btn">&#x1F5D1</button>
-  <p class="basket_dish_price">${basketdish.price.toFixed(2).replace(".", ",")} €</p>
+  <p class="basket_dish_price">${(basketdish.price * basketdish.amount).toFixed(2).replace(".", ",")} €</p>
   </div>
   </div>
   </article>`;

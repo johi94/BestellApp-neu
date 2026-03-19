@@ -73,13 +73,19 @@ function renderBasketDishes() {
 
 // #start region delete / add/ remove dish
 
-// removeDishFromBasket() {
+function removeDishFromBasket(indexMyBasket) {
+  if (myBasket[indexMyBasket].amount > 1) {
+    myBasket[indexMyBasket].amount--;
+  } else {
+    myBasket.splice(indexMyBasket, 1);
+  }
+  renderBasketDishes();
+}
 
-// }
-
-// addDishToBasket() {
-
-// }
+function addDishToBasket(indexMyBasket) {
+  myBasket[indexMyBasket].amount++;
+  renderBasketDishes();
+}
 
 function deleteDishFromBasket(indexMyBasket) {
   myBasket.splice(indexMyBasket, 1);
