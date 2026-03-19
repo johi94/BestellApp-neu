@@ -38,8 +38,21 @@ function renderMyDishes() {
 // #start region dish to basket / basket
 
 function dishToBasket(indexMyDishes) {
-  let basketDish = myDishes[indexMyDishes];
+  let dish = myDishes[indexMyDishes];
+
+  // Prüfen on Gericht im Warenkorb ist, um dieses dann zu erhöhen
+
+  let dishExist = myBasket.find((content) => content.name === dish.name);
+
+if (dishExist) {
+  dishExist.amount++;
+} else {
+  let basketDish = {
+    ...dish,
+    amount: 1
+  };
   myBasket.push(basketDish);
+}
 
   renderBasketDishes();
 }
@@ -56,12 +69,19 @@ function renderBasketDishes() {
   }
 }
 
-
 // #end region dish to basket / basket
 
 // #start region delete / add/ remove dish
 
+// removeDishFromBasket() {
+
+// }
+
+// addDishToBasket() {
+
+// }
+
 function deleteDishFromBasket(indexMyBasket) {
-myBasket.splice(indexMyBasket,1);
-renderBasketDishes();
+  myBasket.splice(indexMyBasket, 1);
+  renderBasketDishes();
 }
