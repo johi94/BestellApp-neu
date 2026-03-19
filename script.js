@@ -73,7 +73,7 @@ function renderDishSum() {
   let sumRef = document.getElementById("dishes_sum");
   let sum = calculateDishSum();
 
-  sumRef.innerHTML = /*html*/ `${sum.toFixed(2).replace(".", ",")} €`;
+  sumRef.innerHTML = /*html*/ `Total: ${sum.toFixed(2).replace(".", ",")} €`;
 }
 
 // #end region dish to basket / basket
