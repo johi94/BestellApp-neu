@@ -92,3 +92,22 @@
 #buy_now_btn:hover {
   cursor: pointer;
 }
+
+/* new parts Dialog food ordered */
+
+#food_ordered {
+  background: midnightblue;
+  border: 4px solid blue;
+  border-radius: 5%;
+}
+
+#food_ordered::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+
+#food_ordered.opened::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  transition: all 2s ease-in;
+}

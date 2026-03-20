@@ -1,8 +1,9 @@
 // Funktion um Gerichte auf website zu rendern
 
-let tacosRef = document.getElementById("content_taco");
-let burritosRef = document.getElementById("content_burrito");
-let dessertsRef = document.getElementById("content_dessert");
+const tacosRef = document.getElementById("content_taco");
+const burritosRef = document.getElementById("content_burrito");
+const dessertsRef = document.getElementById("content_dessert");
+const orderFoodRef = document.getElementById("food_ordered");
 
 function renderMyDishes() {
   tacosRef.innerHTML = "";
@@ -96,9 +97,27 @@ function deleteDishFromBasket(indexMyBasket) {
   deliveryCosts();
 }
 
-// #end region delete/ add/ remove dish
+// new functions for Dialog
+function openOrderFoodDialog() {
+  orderFoodRef.showModal();
+  dialogRef.classList.add("opened");
+}
 
-// #start region calculate price
+function closeOrderFoodDialog() {
+  orderFoodRef.closest();
+  dialogRef.classList.remove("opened");
+}
+
+orderFoodRef.addEventListener("cancel", closeOrderFoodDialog);
+
+orderFoodRef.addEventListener("click", (e) => {
+  if (e.target === orderFoodRef) {
+    closeDialog();
+  }
+});
+// new functions for Dialog
+
+// #end region delete/ add/ remove dish
 
 function calculateDishSum() {
   let sum = 0;

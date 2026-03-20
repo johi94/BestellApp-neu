@@ -56,7 +56,19 @@
   <div id="delivery_cost"></div>
   <div class="seperator"></div>
   <p id="dishes_sum"></p>
-  <button id="buy_now_btn">Buy now</button>
+  <!-- new Dialog added -->
+  <button onclick="openOrderFoodDialog()" id="buy_now_btn">Buy now</button>
+  <dialog id="food_ordered">
+    <button onclick="closeOrderFoodDialog()" class="basket_btn">x</button>
+<header>
+  <h5>Your little piece of Mexico is on the way</h5>
+</header>
+<section>
+  <img class="mexivan_flag" src="./assets/icons/mexican_flag_icon.png" alt="Mexikanische Flagge">
+  <p>Buen provecho!</p>
+</section>
+  </dialog>
+  <!-- new Dialog added -->
   </div>
 </section>
 </div> <!-- Wrapper für sticky Warenkorb / schließt Menü und Warenkorb ein -->
