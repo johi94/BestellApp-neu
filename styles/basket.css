@@ -73,7 +73,12 @@ h4 {
 
 #delivery_cost{
     color: antiquewhite;
-    margin: 16px;
+    margin: 16px; 
+}
+
+.flex_box {
+    display: flex;
+    justify-content:space-between;
 }
 
 .seperator {

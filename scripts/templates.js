@@ -42,9 +42,9 @@ function deliveryCosts() {
     delivery = 5;
   }
 
-  deliveryRef.innerHTML = /*html*/ `
-    Delivery fee: ${delivery.toFixed(2).replace(".", ",")} €
-  `;
+  deliveryRef.innerHTML = /*html*/ `<div class="flex_box">
+    <span>Delivery fee:</span><span>${delivery.toFixed(2).replace(".", ",")} €</span>
+  </div>`;
 
   return delivery;
 }
@@ -56,7 +56,8 @@ function renderDishSum() {
 
   const sum = dishesSum + delivery;
 
-  sumRef.innerHTML = /*html*/ `Total: ${sum.toFixed(2).replace(".", ",")} €`;
+  sumRef.innerHTML = /*html*/ `<div class="flex_box"><span>Total:</span><span>${sum.toFixed(2).replace(".", ",")} €</span>
+  </div>`;
 }
 // (basketdish.price * basketdish.amount) Preis und Anzahl werden zusammengerechnet um die Summe zu erhalten,
 // wenn Artikel mehrfach im Warenkorb liegen
