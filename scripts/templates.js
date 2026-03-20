@@ -38,7 +38,7 @@ function deliveryCosts() {
 
   let delivery = 0;
 
-  if (sum < 20 && sum > 0) {
+  if (sum < 40 && sum > 0) {
     delivery = 5;
   }
 

@@ -80,6 +80,11 @@ font-weight: 400;
       font-weight: 500;
 }
 
+#delivery_cost {
+      font-size: 25px;
+      font-weight: 300;
+}
+
 #dishes_sum {
       font-size: 30px;
       font-weight: 400;
