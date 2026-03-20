@@ -100,19 +100,19 @@ function deleteDishFromBasket(indexMyBasket) {
 // new functions for Dialog
 function openOrderFoodDialog() {
   orderFoodRef.showModal();
-  dialogRef.classList.add("opened");
+  orderFoodRef.classList.add("opened");
 }
 
 function closeOrderFoodDialog() {
-  orderFoodRef.closest();
-  dialogRef.classList.remove("opened");
+  orderFoodRef.close();
+  orderFoodRef.classList.remove("opened");
 }
 
 orderFoodRef.addEventListener("cancel", closeOrderFoodDialog);
 
 orderFoodRef.addEventListener("click", (e) => {
   if (e.target === orderFoodRef) {
-    closeDialog();
+    closeOrderFoodDialog();
   }
 });
 // new functions for Dialog
