@@ -161,3 +161,7 @@ h5 {
   background: rgba(0, 0, 0, 0.5);
   opacity: 1;
 }
+
+#food_ordered.opened {
+  overscroll-behavior: contain;
+}

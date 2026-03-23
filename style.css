@@ -1,13 +1,16 @@
+
 header {
   background: #e76c1f;
   height: 10dvh;
   width: auto;
+  max-width: 3840px;
   display: flex;
   justify-content: space-between;
 }
 
 main {
   flex: 1;
+  max-width: 3840px;
 }
 
 .cover_photo {
@@ -15,6 +18,7 @@ main {
   height: 70dvh;
   background-size: cover;
   background-position: center;
+  max-width: 3840px;
 }
 
 .restaurant_logo_section {
@@ -35,6 +39,7 @@ main {
   align-items: center;
   flex-direction: column;
   margin: 24px;
+  max-width: 3840px;
 }
 
 .restaurant_name_and_reviews {
@@ -140,6 +145,7 @@ footer {
   background: #e76c1f;
   height: 10dvh;
   width: auto;
+  max-width: 3840px;
   display: flex;
   justify-content: center;
   align-items: center;
