@@ -112,9 +112,11 @@ h2 {
   margin: 16px;
   display: flex;
 }
+
 .dish-img {
   width: 300px;
   aspect-ratio: 1/1;
+  object-fit: cover;
   padding: 16px;
   border-radius: 20px;
 }
@@ -160,6 +162,13 @@ footer {
 }
 
 /*  */
+
+@media (max-width: 1700px) {
+.dish-img {
+  width: 260px;
+}
+}
+
 @media (max-width: 1200px) {
   .reviews {
     margin-top: 34px;
@@ -169,9 +178,21 @@ footer {
 }
 
 @media (max-width: 1000px) {
+  header {
+    height: 9dvh;
+  }
+  .restaurant_logo_section {
+    margin-top: -125px;
+  }
   .restaurant_logo {
     width: 250px;
     height: 250px;
+  }
+  .cover_photo{
+    height: 60dvh;
+  }
+  footer {
+    height: 9dvh;
   }
 }
 
@@ -185,6 +206,12 @@ footer {
 }
 
 @media (max-width: 800px) {
+   .cover_photo{
+    height: 50dvh;
+  }
+  .restaurant_logo_section {
+    margin-top: -100px;
+  }
   .restaurant_logo {
     width: 200px;
     height: 200px;
@@ -209,9 +236,36 @@ footer {
   }
 }
 
+@media (max-width: 700px) {
+  header {
+    height: 8dvh;
+  }
+  footer {
+    height: 8dvh;
+  }
+}
+
+@media (max-width: 600px) {
+   .cover_photo{
+    height: 40dvh;
+  }
+}
+
 @media (max-width: 560px) {
   h1 {
     text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+   .cover_photo{
+    height: 30dvh;
+  }
+}
+
+@media (max-width: 400px) {
+   .cover_photo{
+    height: 20dvh;
   }
 }
 
