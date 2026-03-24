@@ -203,6 +203,9 @@ h5 {
   .add-to-basket-btn {
     font-size: 16px;
   }
+   .copyright_footer {
+    font-size: 25px;
+  }
 }
 
 @media (max-width: 805px) {
@@ -218,6 +221,13 @@ h5 {
   .dish_description {
     font-size: 18px;
   }
+ 
+}
+
+@media (max-width: 750px) {
+  .copyright_footer {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -229,5 +239,14 @@ h5 {
 @media (max-width: 550px) {
   h1 {
     font-size: 50px;
+  }
+}
+
+@media (max-width: 450px) {
+  h3 {
+    font-size: 18px;
+  }
+  .dish_description {
+    font-size: 16px;
   }
 }
