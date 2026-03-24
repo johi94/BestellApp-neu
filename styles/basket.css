@@ -93,10 +93,14 @@ h4 {
   margin: 16px;
 }
 
-/* ab 1000px breite kein WK zu sehen/ Button erstellen um diesen ein und auszublenden unter 1000px */
-@media (max-width: 1000px) {
-  .basket {
+/* ab 750px breite kein WK zu sehen/ Button erstellen um diesen ein und auszublenden unter 1000px */
+@media (max-width: 750px) {
+  .menu_meals_and_dishes_wrapper {
+    width: 100%;
+  }
+  .basket_wrapper {
     display: none;
   }
 }
+
 /*  */

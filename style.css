@@ -109,7 +109,7 @@ h2 {
 .dishes {
   background: rgb(253, 234, 220);
   border-radius: 20px;
-  margin: 16px;
+  margin: 24px;
   display: flex;
 }
 
@@ -164,15 +164,15 @@ footer {
 /*  */
 
 @media (max-width: 1700px) {
-.dish-img {
-  width: 260px;
-}
+  .dish-img {
+    width: 260px;
+  }
 }
 
 @media (max-width: 1500px) {
-.dish-img {
-  width: 240px;
-}
+  .dish-img {
+    width: 240px;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -184,26 +184,32 @@ footer {
     object-position: 50% 35%;
     padding-bottom: 0;
   }
-.dishes {
-  align-items: center;
-  flex-direction: column;
+  .dishes {
+    align-items: center;
+    flex-direction: column;
+  }
+  .name_description {
+    margin-left: 16px;
+    margin-bottom: 0;
+  }
+  .dish_description {
+    margin-top: 8px;
+    padding: 0;
+  }
+  .space_between {
+    flex-direction: column;
+  }
+  .price_btn_dishes {
+    flex-direction: row;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
 }
-.name_description {
-  margin-left: 16px;
-  margin-bottom: 0;
-}
-.dish_description {
-  margin-top: 8px;
-  padding: 0;
-}
-.space_between {
-  flex-direction: column;
-}
-.price_btn_dishes {
-  flex-direction: row;
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
+
+@media (max-width: 1350px) {
+  .meals {
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -225,7 +231,7 @@ footer {
     width: 250px;
     height: 250px;
   }
-  .cover_photo{
+  .cover_photo {
     height: 60dvh;
   }
   footer {
@@ -243,7 +249,7 @@ footer {
 }
 
 @media (max-width: 800px) {
-   .cover_photo{
+  .cover_photo {
     height: 50dvh;
   }
   .restaurant_logo_section {
@@ -269,7 +275,7 @@ footer {
     margin-top: 0;
   }
   .restaurant_description {
-      text-align: center;
+    text-align: center;
   }
 }
 
@@ -283,7 +289,7 @@ footer {
 }
 
 @media (max-width: 600px) {
-   .cover_photo{
+  .cover_photo {
     height: 40dvh;
   }
 }
@@ -295,22 +301,13 @@ footer {
 }
 
 @media (max-width: 500px) {
-   .cover_photo{
+  .cover_photo {
     height: 30dvh;
   }
 }
 
 @media (max-width: 400px) {
-   .cover_photo{
+  .cover_photo {
     height: 20dvh;
   }
 }
-
-
-
-
-
-
-
-
-
