@@ -1,16 +1,17 @@
-
 header {
   background: #e76c1f;
   height: 10dvh;
   width: auto;
-  max-width: 3840px;
+  max-width: 1920px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
 
 main {
   flex: 1;
-  max-width: 3840px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .cover_photo {
@@ -18,7 +19,10 @@ main {
   height: 70dvh;
   background-size: cover;
   background-position: center;
-  max-width: 3840px;
+  width: 100%;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .restaurant_logo_section {
@@ -39,7 +43,7 @@ main {
   align-items: center;
   flex-direction: column;
   margin: 24px;
-  max-width: 3840px;
+  max-width: 1920px;
 }
 
 .restaurant_name_and_reviews {
@@ -101,7 +105,6 @@ h2 {
   color: white;
 }
 
-
 /* Klasse aus HTML-Template-Funktion um Gerichte auf Website anzeigen zu lassen */
 .dishes {
   background: rgb(253, 234, 220);
@@ -117,16 +120,16 @@ h2 {
 }
 
 .space_between {
- display: flex;
- justify-content: space-between;
- width: 100%; /* um vollen Platz im Container zu nutzen */
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* um vollen Platz im Container zu nutzen */
 }
 
 .name_description {
- margin: 16px;
- display: flex;
- flex-direction: column;
- width: 80%;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
 }
 
 .dish_description {
@@ -134,18 +137,19 @@ h2 {
 }
 
 .price_btn_dishes {
-   margin: 16px;
- display: flex;
- align-items: center;
- justify-content: space-between;
- flex-direction: column;
+  margin: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 footer {
   background: #e76c1f;
   height: 10dvh;
   width: auto;
-  max-width: 3840px;
+  max-width: 1920px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,3 +160,66 @@ footer {
 }
 
 /*  */
+@media (max-width: 1200px) {
+  .reviews {
+    margin-top: 34px;
+    height: 40px; /* Umrandung des Stern und review Bereichs */
+    width: 140px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .restaurant_logo {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 900px) {
+  .restaurant_name_and_reviews {
+    gap: 16px;
+  }
+  .reviews {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .restaurant_logo {
+    width: 200px;
+    height: 200px;
+  }
+  .reviews {
+    margin-top: 26px;
+  }
+}
+
+@media (max-width: 760px) {
+  .restaurant_name_and_reviews {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .reviews {
+    margin-top: 0;
+  }
+  .restaurant_description {
+      text-align: center;
+  }
+}
+
+@media (max-width: 560px) {
+  h1 {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+

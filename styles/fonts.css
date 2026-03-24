@@ -1,114 +1,171 @@
 /* Style für alles was eine Schriftgröße bekommt */
 
 * {
-      font-family: "Roboto Slab", serif;
+  font-family: "Roboto Slab", serif;
 }
 
 h1 {
-      font-size: 80px;
-      font-weight: 700;
+  font-size: 80px;
+  font-weight: 700;
 }
 
 /* Überschrift Gerichtemenü */
 h2 {
-      font-size: 60px;
-      font-weight: 500;
+  font-size: 60px;
+  font-weight: 500;
 }
 
 /* Überschrift Gerichte Tacos, Burritos, Desserts */
 h3 {
-      font-size: 50px;
-      font-weight: 400;
+  font-size: 50px;
+  font-weight: 400;
 }
 
 /* Überschrift Warenkorb */
 h4 {
-font-size: 35px;
-font-weight: 300;
+  font-size: 35px;
+  font-weight: 300;
 }
 
 h5 {
-      font-size: 20px;
-      font-weight: 700;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .review_star {
-      font-size: 40px;
+  font-size: 40px;
 }
 
 .review_points {
-      font-size: 35px;
+  font-size: 35px;
 }
 
 .review_comments {
-      font-size: 25px;
+  font-size: 25px;
 }
 
 .restaurant_description {
-      font-size: 40px;
-      font-weight: 500;
+  font-size: 40px;
+  font-weight: 500;
 }
 
 .dish_description {
-      font-size: 30px;
-      font-weight: 300;
+  font-size: 30px;
+  font-weight: 300;
 }
 
 .dish_price {
-      font-size: 30px;
-      font-weight: 400;
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .add-to-basket-btn {
-      font-size: 20px;
-      font-weight: 400;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 /* h3 im Warenkorb Überschrift der Gerichte */
-.basket_dish_name { 
-font-size: 30px;
-font-weight: 400;
+.basket_dish_name {
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .basket_dish_price {
-      font-size: 30px;
-      font-weight: 400;
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .basket_btn {
-      font-size: 30px;
-      font-weight: 300;
+  font-size: 30px;
+  font-weight: 300;
 }
 
 .basket_delete_btn {
-      font-size: 30px;
-      font-weight: 500;
+  font-size: 30px;
+  font-weight: 500;
 }
 
 #delivery_cost {
-      font-size: 25px;
-      font-weight: 300;
+  font-size: 25px;
+  font-weight: 300;
 }
 
 #dishes_sum {
-      font-size: 30px;
-      font-weight: 400;
+  font-size: 30px;
+  font-weight: 400;
 }
 
 #buy_now_btn {
-      font-size: 40px;
-      font-weight: 400;
+  font-size: 40px;
+  font-weight: 400;
 }
 
 .dialog_text {
-      font-size: 20px;
-      font-weight: 700;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .copyright_footer {
-      font-size: 30px;
-      font-weight: 300;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+/*  */
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 75px;
+  }
+  .review_star {
+    font-size: 30px;
+  }
+  .review_points {
+    font-size: 25px;
+  }
+  .review_comments {
+    font-size: 20px;
+  }
+  .restaurant_description {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 1100px) {
+  h1 {
+    font-size: 70px;
+  }
+  .restaurant_description {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 65px;
+  }
+  .restaurant_description {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 805px) {
+  h1 {
+    font-size: 60px;
+  }
+  .restaurant_description {
+    font-size: 25px;
+  }
 }
 
 
-/*  */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 50px;
+  }
+}
