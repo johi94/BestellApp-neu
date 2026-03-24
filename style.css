@@ -169,6 +169,23 @@ footer {
 }
 }
 
+@media (max-width: 1500px) {
+.dish-img {
+  width: 240px;
+}
+.dish_description {
+  text-align: center;
+}
+}
+
+@media (max-width: 1400px) {
+.dish-img {
+  width: 200px;
+}
+}
+
+/* container als column anordnen?? */
+
 @media (max-width: 1200px) {
   .reviews {
     margin-top: 34px;
