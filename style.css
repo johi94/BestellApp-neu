@@ -181,6 +181,7 @@ footer {
     height: 150px;
     aspect-ratio: 16/9;
     object-fit: cover;
+    object-position: 50% 35%;
     padding-bottom: 0;
   }
 .dishes {
