@@ -1,5 +1,3 @@
-// Funktion um Gerichte auf website zu rendern
-
 const tacosRef = document.getElementById("content_taco");
 const burritosRef = document.getElementById("content_burrito");
 const dessertsRef = document.getElementById("content_dessert");
@@ -32,7 +30,7 @@ function renderMyDishes() {
   }
 }
 
-// #start region dish to basket / basket
+// #start region dish to basket / basket-functions
 
 function dishToBasket(indexMyDishes) {
   const dish = myDishes[indexMyDishes];
@@ -68,10 +66,6 @@ function renderBasketDishes() {
   renderDishSum();
 }
 
-// #end region dish to basket / basket
-
-// #start region delete/ add/ remove dish
-
 function removeDishFromBasket(indexMyBasket) {
   if (myBasket[indexMyBasket].amount > 1) {
     myBasket[indexMyBasket].amount--;
@@ -97,28 +91,6 @@ function deleteDishFromBasket(indexMyBasket) {
   deliveryCosts();
 }
 
-// new functions for Dialog
-function openOrderFoodDialog() {
-  orderFoodRef.showModal();
-  orderFoodRef.classList.add("opened");
-}
-
-function closeOrderFoodDialog() {
-  orderFoodRef.close();
-  orderFoodRef.classList.remove("opened");
-}
-
-orderFoodRef.addEventListener("cancel", closeOrderFoodDialog);
-
-orderFoodRef.addEventListener("click", (e) => {
-  if (e.target === orderFoodRef) {
-    closeOrderFoodDialog();
-  }
-});
-// new functions for Dialog
-
-// #end region delete/ add/ remove dish
-
 function calculateDishSum() {
   let sum = 0;
 
@@ -132,4 +104,35 @@ function calculateDishSum() {
 
   return sum;
 }
+
+// #end region dish to basket / basket-functions
+
+
+// #start region Dialog
+
+function openOrderFoodDialog() {
+  orderFoodRef.showModal();
+  orderFoodRef.classList.add("opened");
+  document.body.style.overflow = "hidden";
+}
+
+function closeOrderFoodDialog() {
+  orderFoodRef.close();
+  orderFoodRef.classList.remove("opened");
+  document.body.style.overflow = "visible";
+}
+
+orderFoodRef.addEventListener("cancel", closeOrderFoodDialog);
+
+orderFoodRef.addEventListener("click", (e) => {
+  if (e.target === orderFoodRef) {
+    closeOrderFoodDialog();
+  }
+});
+
+// #end region Dialog
+
+
+
+
 

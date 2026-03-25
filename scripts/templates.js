@@ -37,7 +37,6 @@ function deliveryCosts() {
   const sum = calculateDishSum();
 
   let delivery = 0;
-
   if (sum < 40 && sum > 0) {
     delivery = 5;
   }
@@ -48,6 +47,7 @@ function deliveryCosts() {
 
   return delivery;
 }
+// ab 40€ reiner Warenwert entfallen mit if-Abfrage die Lieferkosten
 
 function renderDishSum() {
   const sumRef = document.getElementById("dishes_sum");
