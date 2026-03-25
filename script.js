@@ -91,6 +91,13 @@ function deleteDishFromBasket(indexMyBasket) {
   deliveryCosts();
 }
 
+function deleteAllDishesWithOrder(indexMyBasket) {
+   myBasket.splice(indexMyBasket);
+  renderBasketDishes();
+  renderDishSum();
+  deliveryCosts();
+}
+
 function calculateDishSum() {
   let sum = 0;
 
@@ -114,6 +121,7 @@ function openOrderFoodDialog() {
   orderFoodRef.showModal();
   orderFoodRef.classList.add("opened");
   document.body.style.overflow = "hidden";
+  deleteAllDishesWithOrder();
 }
 
 function closeOrderFoodDialog() {
