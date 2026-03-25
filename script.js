@@ -2,6 +2,7 @@ const tacosRef = document.getElementById("content_taco");
 const burritosRef = document.getElementById("content_burrito");
 const dessertsRef = document.getElementById("content_dessert");
 const orderFoodRef = document.getElementById("food_ordered");
+const showBasketRef = document.getElementById("basket_wrapper");
 
 function renderMyDishes() {
   tacosRef.innerHTML = "";
@@ -110,6 +111,15 @@ function calculateDishSum() {
   }
 
   return sum;
+}
+
+function showOrHideBasket () {
+let showOrHide = showBasketRef.style.display = 'block';
+if (showOrHide.style.display === 'none' || showOrHide.style.display === '') {
+    showOrHide.style.display = 'block';
+  } else {
+    showOrHide.style.display = 'none';
+  }
 }
 
 // #end region dish to basket / basket-functions

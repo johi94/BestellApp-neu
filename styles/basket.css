@@ -13,7 +13,7 @@
 }
 
 /* Der Warenkorb-Wrapper */
-.basket_wrapper {
+#basket_wrapper {
   width: 450px;
   flex: 1;
 }
@@ -71,14 +71,14 @@ h4 {
   width: 100%; /* um Platz zu nutzen, damit space-between zwischen delete_btn und price funktioniert */
 }
 
-#delivery_cost{
-    color: antiquewhite;
-    margin: 16px; 
+#delivery_cost {
+  color: antiquewhite;
+  margin: 16px;
 }
 
 .flex_box {
-    display: flex;
-    justify-content:space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .seperator {
@@ -98,7 +98,7 @@ h4 {
   .menu_meals_and_dishes_wrapper {
     width: 100%;
   }
-  .basket_wrapper {
+  #basket_wrapper {
     display: none;
   }
 }
