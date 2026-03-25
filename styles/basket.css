@@ -107,9 +107,11 @@ h4 {
     transform: translate(-50%, -50%); 
     width: 90%;      
     max-width: 450px;    
-    height: 800px;
+    max-height: 90dvh;
   }
   .basket {
+    margin-top: 0;
+    max-height: 90dvh;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
   }
 }
