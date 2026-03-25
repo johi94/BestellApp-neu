@@ -3,6 +3,7 @@ const burritosRef = document.getElementById("content_burrito");
 const dessertsRef = document.getElementById("content_dessert");
 const orderFoodRef = document.getElementById("food_ordered");
 const showBasketRef = document.getElementById("basket_wrapper");
+const basketBtnRef = document.getElementById('show_basket_btn');
 
 function renderMyDishes() {
   tacosRef.innerHTML = "";
@@ -113,14 +114,35 @@ function calculateDishSum() {
   return sum;
 }
 
-function showOrHideBasket () {
-let showOrHide = showBasketRef.style.display = 'block';
-if (showOrHide.style.display === 'none' || showOrHide.style.display === '') {
-    showOrHide.style.display = 'block';
+function showBasket () {
+
+if (showBasketRef.style.display === 'none' || showBasketRef.style.display === '') {
+    showBasketRef.style.display = 'flex';
+    document.body.style.overflow = "hidden";
   } else {
-    showOrHide.style.display = 'none';
-  }
+   closeBasket();
 }
+}
+
+function closeBasket() {
+  showBasketRef.style.display = 'none';
+    document.body.style.overflow = "visible";
+ }
+
+ window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        closeBasket();
+    }
+});
+
+window.addEventListener("mousedown", (e) => {
+    if (showBasketRef.style.display === 'flex') {
+        if (!showBasketRef.contains(e.target) && !basketBtnRef.contains(e.target)) {
+            closeBasket();
+        }
+    }
+});
+
 
 // #end region dish to basket / basket-functions
 

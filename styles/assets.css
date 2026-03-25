@@ -97,7 +97,7 @@
   display: none;
 }
 
-.show_basket_btn {
+#show_basket_btn {
   background: black;
   border-radius: 20px;
   border-color: #e76c1f;
@@ -107,7 +107,7 @@
   height: 60px;
 }
 
-.show_basket_btn:hover {
+#show_basket_btn:hover {
   cursor: pointer;
 }
 

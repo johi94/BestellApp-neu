@@ -93,6 +93,7 @@ h4 {
   margin: 16px;
 }
 
+
 /* ab 750px breite kein WK zu sehen/ Button erstellen um diesen ein und auszublenden unter 1000px */
 @media (max-width: 750px) {
   .menu_meals_and_dishes_wrapper {
@@ -100,6 +101,16 @@ h4 {
   }
   #basket_wrapper {
     display: none;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 90%;      
+    max-width: 450px;    
+    height: 800px;
+  }
+  .basket {
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
   }
 }
 

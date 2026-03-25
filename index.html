@@ -22,6 +22,7 @@
         <img class="bestell_app_icon" src="./assets/icons/Capa 1.png" alt="BestellApp Icon">
         <img class="bestell_app_menu_icon" src="./assets/icons/menu_stripes_header.svg" alt="BestellApp Menü Icon" >
     </header>
+    <div id="overlay" onclick="closeBasket()"></div>
     <main>
 <section class="cover_photo">
 </section>
@@ -36,7 +37,7 @@
   <p class="restaurant_description">Authentic mexican food, made with love and a lot of salsa</p>
 </section>
 <section class="basket_btn_wrapper">
-  <button onclick="showOrHideBasket()" class="show_basket_btn"><img src="./assets/icons/basket_icon.svg" alt="Warenkorb Button" class="show_basket_icon"></button>
+  <button onclick="showBasket()" id="show_basket_btn"><img src="./assets/icons/basket_icon.svg" alt="Warenkorb Button" class="show_basket_icon"></button>
 </section>
 <div class="menu_wrapper"> <!-- Wrapper für sticky Warenkorb / schließt Menü und Warenkorb ein -->
   <section class="menu_meals_and_dishes_wrapper"> <!-- Wrapper für Kategorien der Gerichte und die Gerichte -->
