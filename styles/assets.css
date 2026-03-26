@@ -189,6 +189,19 @@ h5 {
   overscroll-behavior: contain;
 }
 
+.close_basket_mobile {
+   position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border-width: 3px;
+  border-style: solid;
+  padding-bottom: 4px;
+}
+
 @media (max-width: 1350px) {
   .taco_icon {
     margin-left: 100px;
