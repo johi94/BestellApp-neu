@@ -3,7 +3,7 @@ const burritosRef = document.getElementById("content_burrito");
 const dessertsRef = document.getElementById("content_dessert");
 const orderFoodRef = document.getElementById("food_ordered");
 const showBasketRef = document.getElementById("basket_wrapper");
-const basketBtnRef = document.getElementById('show_basket_btn');
+const basketBtnRef = document.getElementById("show_basket_btn");
 
 function renderMyDishes() {
   tacosRef.innerHTML = "";
@@ -94,7 +94,7 @@ function deleteDishFromBasket(indexMyBasket) {
 }
 
 function deleteAllDishesWithOrder(indexMyBasket) {
-   myBasket.splice(indexMyBasket);
+  myBasket.splice(indexMyBasket);
   renderBasketDishes();
   renderDishSum();
   deliveryCosts();
@@ -114,45 +114,52 @@ function calculateDishSum() {
   return sum;
 }
 
-function showBasket () {
-
-if (showBasketRef.style.display === 'none' || showBasketRef.style.display === '') {
-    showBasketRef.style.display = 'flex';
+function showBasket() {
+  if (
+    showBasketRef.style.display === "none" ||
+    showBasketRef.style.display === ""
+  ) {
+    showBasketRef.style.display = "flex";
     document.body.style.overflow = "hidden";
   } else {
-   closeBasket();
-}
+    closeBasket();
+  }
 }
 
 function closeBasket() {
-  showBasketRef.style.display = 'none';
-    document.body.style.overflow = "visible";
- }
+  showBasketRef.style.display = "none";
+  document.body.style.overflow = "visible";
+}
 
- window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-        closeBasket();
-    }
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeBasket();
+  }
 });
 
 window.addEventListener("mousedown", (e) => {
-   if (showBasketRef.style.display === 'flex') {
-        
-        // Prüfen, ob der Klick NICHT im Warenkorb war
-        const clickedInsideBasket = showBasketRef.contains(e.target);
-        // Prüfen, ob der Klick NICHT auf dem Öffnen-Button war
-        const clickedOnBtn = basketBtnRef.contains(e.target);
-        // Prüfen, ob der Klick auf dem Dialog-Feld war
-        const clickedOnDialog = orderFoodRef.contains(e.target);
+  if (showBasketRef.style.display === "flex") {
+    // Prüfen, ob der Klick NICHT im Warenkorb war
+    const clickedInsideBasket = showBasketRef.contains(e.target);
+    // Prüfen, ob der Klick NICHT auf dem Öffnen-Button war
+    const clickedOnBtn = basketBtnRef.contains(e.target);
+    // Prüfen, ob auf einen "Add to basket" Button geklickt wurde
+    const clickedOnAddBtn = e.target.classList.contains("add-to-basket-btn");
+    // Prüfen, ob der Klick auf dem Dialog-Feld war
+    const clickedOnDialog = orderFoodRef.contains(e.target);
 
-        if (!clickedInsideBasket && !clickedOnBtn && !clickedOnDialog) {
-            closeBasket();
-        }
+    if (
+      !clickedInsideBasket &&
+      !clickedOnBtn &&
+      !clickedOnAddBtn &&
+      !clickedOnDialog
+    ) {
+      closeBasket();
     }
+  }
 });
 
 // #end region dish to basket / basket-functions
-
 
 // #start region Dialog
 
@@ -184,18 +191,16 @@ orderFoodRef.addEventListener("click", (e) => {
 
 // Warenkorb wieder anzeigen lassen, wenn in Mobilansicht geschlossen, ab Bildschirmbreite > 750px
 
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   // Wenn der Bildschirm breiter als 750px wird (Desktop-Ansicht)
   if (window.innerWidth > 750) {
     // entfernen von "display: none" des JavaScript
-    showBasketRef.style.display = 'flex'; 
+    showBasketRef.style.display = "flex";
     // Scrollen auf der Hauptseite wieder möglich
     document.body.style.overflow = "visible";
   } else {
-    if (showBasketRef.style.display === 'flex') {
+    if (showBasketRef.style.display === "flex") {
       document.body.style.overflow = "hidden"; // Scrollen wieder sperren
     }
   }
 });
-
-

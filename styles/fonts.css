@@ -281,4 +281,10 @@ h5 {
   .basket_dish_price { 
     font-size: 20px;
   }
+  #delivery_cost {
+  font-size: 20px;
+}
+#dishes_sum {
+  font-size: 20px;
+}
 }
