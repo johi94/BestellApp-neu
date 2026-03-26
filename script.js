@@ -199,8 +199,8 @@ window.addEventListener("resize", () => {
     // Scrollen auf der Hauptseite wieder möglich
     document.body.style.overflow = "visible";
   } else {
-    if (showBasketRef.style.display === "flex") {
-      document.body.style.overflow = "hidden"; // Scrollen wieder sperren
+    if (showBasketRef.style.display === "flex" && document.body.style.overflow === "visible") {
+      showBasketRef.style.display = "none"; // Scrollen wieder sperren
     }
   }
 });
