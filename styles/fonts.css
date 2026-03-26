@@ -240,6 +240,9 @@ h5 {
 }
 
 @media (max-width: 500px) {
+  .restaurant_description {
+    font-size: 20px;
+  }
   .basket_dish_name {
     font-size: 25px;
   }
