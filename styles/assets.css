@@ -346,6 +346,15 @@ h5 {
     right: 3px;
     margin-bottom: 10px;
   }
+  .basket_btn {
+  height: 40px;
+  width: 60px;
+}
+.basket_delete_btn {
+  height: 40px;
+   width: 40px;
+  
+}
 }
 
 @media (max-width: 450px) {
@@ -376,4 +385,12 @@ h5 {
     width: 250px;
     margin-top: 16px;
   }
+   .basket_btn {
+  height: 30px;
+  width: 50px;
+}
+.basket_delete_btn {
+  height: 30px;
+   width: 30px;
+}
 }

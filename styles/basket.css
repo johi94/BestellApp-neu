@@ -114,4 +114,16 @@ h4 {
   }
 }
 
+@media (max-width: 500px) {
+  .dishes_basket {
+    width: 350px;
+    height: 125px;
+  }
+}
 
+@media (max-width: 400px) {
+  .dishes_basket {
+    width: 250px;
+    height: 125px;
+  }
+}

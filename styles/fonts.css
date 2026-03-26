@@ -242,11 +242,20 @@ h5 {
 }
 
 @media (max-width: 500px) {
+  .basket_dish_name {
+    font-size: 25px;
+  }
   h5 {
     font-size: 16px;
   }
   .dialog_text {
     font-size: 16px;
+  }
+  .basket_dish_price { 
+    font-size: 25px;
+  }
+  .basket_delete_btn {
+    font-size: 25px;
   }
 }
 
@@ -256,5 +265,20 @@ h5 {
   }
   .dish_description {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .basket_dish_name {
+    font-size: 20px;
+  }
+  .basket_btn {
+    font-size: 20px;
+  }
+  .basket_delete_btn {
+    font-size: 20px;
+  }
+  .basket_dish_price { 
+    font-size: 20px;
   }
 }
