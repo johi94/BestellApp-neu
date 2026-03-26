@@ -11,7 +11,7 @@ function renderMyDishes() {
   for (let i = 0; i < myDishes.length; i++) {
     const dish = myDishes[i];
     const template = getDishesTemplate(i);
-    
+
     if (dish.category === "taco") tacosRef.innerHTML += template;
     if (dish.category === "burrito") burritosRef.innerHTML += template;
     if (dish.category === "dessert") dessertsRef.innerHTML += template;
