@@ -5,11 +5,10 @@ const orderFoodRef = document.getElementById("food_ordered");
 const showBasketRef = document.getElementById("basket_wrapper");
 const basketBtnRef = document.getElementById("show_basket_btn");
 
+function renderMyDishes() {
   tacosRef.innerHTML = "";
   burritosRef.innerHTML = "";
   dessertsRef.innerHTML = "";
-
-function renderMyDishes() {
 
   for (
     let indexMyDishes = 0;
@@ -52,6 +51,7 @@ function dishToBasket(indexMyDishes) {
     myBasket.push(basketDish);
   }
 
+  renderMyDishes();
   renderBasketDishes();
 }
 
@@ -78,6 +78,7 @@ function removeDishFromBasket(indexMyBasket) {
   renderBasketDishes();
   renderDishSum();
   deliveryCosts();
+  renderMyDishes();
 }
 
 function addDishToBasket(indexMyBasket) {
@@ -85,6 +86,7 @@ function addDishToBasket(indexMyBasket) {
   renderBasketDishes();
   renderDishSum();
   deliveryCosts();
+  renderMyDishes();
 }
 
 function deleteDishFromBasket(indexMyBasket) {
@@ -92,6 +94,7 @@ function deleteDishFromBasket(indexMyBasket) {
   renderBasketDishes();
   renderDishSum();
   deliveryCosts();
+  renderMyDishes();
 }
 
 function deleteAllDishesWithOrder(indexMyBasket) {
@@ -99,6 +102,7 @@ function deleteAllDishesWithOrder(indexMyBasket) {
   renderBasketDishes();
   renderDishSum();
   deliveryCosts();
+  renderMyDishes();
 }
 
 function calculateDishSum() {
@@ -144,7 +148,7 @@ window.addEventListener("mousedown", (e) => {
     const clickedInsideBasket = showBasketRef.contains(e.target);
     // proof, click was not on open basket button
     const clickedOnBtn = basketBtnRef.contains(e.target);
-    // proof, click was on "Add to basket" Button 
+    // proof, click was on "Add to basket" Button
     const clickedOnAddBtn = e.target.classList.contains("add-to-basket-btn");
     // proof, click was on dialog
     const clickedOnDialog = orderFoodRef.contains(e.target);
@@ -200,8 +204,11 @@ window.addEventListener("resize", () => {
     // enables scrolling
     document.body.style.overflow = "visible";
   } else {
-    if (showBasketRef.style.display === "flex" && document.body.style.overflow === "visible") {
-      showBasketRef.style.display = "none"; 
+    if (
+      showBasketRef.style.display === "flex" &&
+      document.body.style.overflow === "visible"
+    ) {
+      showBasketRef.style.display = "none";
     }
   }
 });

@@ -40,6 +40,10 @@
   margin-right: 120px; /* distance to text */
 }
 
+.btn-container {
+  position: relative;
+}
+
 .add-to-basket-btn {
   height: 40px;
   width: 150px;
@@ -53,6 +57,11 @@
   cursor: pointer;
   background: rgba(255, 255, 255, 0.2);
 }
+
+.dish-counter {
+  display: none;
+}
+
 
 .basket_btn {
   height: 50px;
@@ -289,6 +298,28 @@ h5 {
   .close_basket_mobile {
     display: block;
   }
+  .btn-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .dish-counter {
+        display: flex; /* Jetzt wird er sichtbar */
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -10px;    /* Positionierung über dem Button */
+        right: -10px;
+        background-color: #ff4500;
+        color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        font-size: 12px;
+        font-weight: bold;
+        border: 2px solid white;
+        z-index: 10; /* Damit er über dem Button liegt */
+    }
 }
 
 @media (max-width: 900px) {
