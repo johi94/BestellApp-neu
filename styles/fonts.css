@@ -131,7 +131,7 @@ h5 {
 }
 
 @media (max-width: 1600px) {
-       h3 {
+  h3 {
     font-size: 38px;
   }
   .dish_description {
@@ -140,7 +140,7 @@ h5 {
 }
 
 @media (max-width: 1500px) {
-       h3 {
+  h3 {
     font-size: 36px;
   }
   .dish_description {
@@ -188,7 +188,7 @@ h5 {
   h1 {
     font-size: 65px;
   }
-   h2 {
+  h2 {
     font-size: 40px;
   }
   h3 {
@@ -203,7 +203,7 @@ h5 {
   .add-to-basket-btn {
     font-size: 16px;
   }
-   .copyright_footer {
+  .copyright_footer {
     font-size: 25px;
   }
 }
@@ -221,7 +221,6 @@ h5 {
   .dish_description {
     font-size: 18px;
   }
- 
 }
 
 @media (max-width: 750px) {
@@ -239,6 +238,15 @@ h5 {
 @media (max-width: 550px) {
   h1 {
     font-size: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  h5 {
+    font-size: 16px;
+  }
+  .dialog_text {
+    font-size: 16px;
   }
 }
 

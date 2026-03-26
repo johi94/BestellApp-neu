@@ -120,7 +120,7 @@
 
 .dialog_header {
   background: rgb(54, 53, 52);
-  height: 5dvh;
+  height: 10dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,7 +145,7 @@
 }
 
 h5 {
-  margin-top: 45px;
+  margin-top: 70px;
   margin-bottom: 16px;
   color: antiquewhite;
 }
@@ -153,6 +153,7 @@ h5 {
 .mexican_flag {
   width: 450px;
   height: auto;
+  margin-top: 24px;
 }
 
 .dialog_text {
@@ -190,7 +191,8 @@ h5 {
 }
 
 .close_basket_mobile {
-   position: absolute;
+  display: none;
+  position: absolute;
   top: 5px;
   right: 5px;
   z-index: 10;
@@ -200,6 +202,10 @@ h5 {
   border-width: 3px;
   border-style: solid;
   padding-bottom: 4px;
+}
+
+.close_basket_mobile:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 1350px) {
@@ -266,6 +272,9 @@ h5 {
   .dessert_icon {
     height: 100px;
   }
+  #food_ordered {
+    left: 50%;
+  }
 }
 
 @media (max-width: 900px) {
@@ -317,6 +326,23 @@ h5 {
     display: flex;
     justify-content: center;
   }
+  .close_basket_mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  h5 {
+    margin-bottom: 0;
+  }
+  .mexican_flag {
+    width: 350px;
+  }
+  .dialog_btn {
+    top: 3px;
+    right: 3px;
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -335,5 +361,16 @@ h5 {
     height: 100px;
     margin-left: 20px;
     margin-right: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  h5 {
+    margin-top: 70px;
+    margin-bottom: 16px;
+  }
+  .mexican_flag {
+    width: 250px;
+    margin-top: 16px;
   }
 }

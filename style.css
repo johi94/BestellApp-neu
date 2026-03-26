@@ -297,10 +297,10 @@ footer {
   .cover_photo {
     height: 40dvh;
   }
-   /* Zeilenumbruch durch CSS, gefunden */
+  /* Zeilenumbruch durch CSS */
   .linebreak::after {
-     content: '\A';
-    white-space: pre; 
+    content: "\A";
+    white-space: pre;
   }
 }
 
