@@ -2,16 +2,12 @@ header {
   background: #e76c1f;
   height: 10dvh;
   width: auto;
-  max-width: 1920px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
 
 main {
   flex: 1;
-  max-width: 1920px;
-  margin: 0 auto;
 }
 
 .cover_photo {
@@ -20,9 +16,7 @@ main {
   background-size: cover;
   background-position: center;
   width: 100%;
-  max-width: 1920px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
 }
 
 .restaurant_logo_section {
@@ -43,7 +37,7 @@ main {
   align-items: center;
   flex-direction: column;
   margin: 24px;
-  max-width: 1920px;
+ 
 }
 
 .restaurant_name_and_reviews {
@@ -57,23 +51,23 @@ main {
   align-items: center;
   gap: 8px;
   background: rgba(231, 108, 31, 0.4);
-  margin-top: 38px; /* gleiche Höhe wie h1 */
-  height: 45px; /* Umrandung des Stern und review Bereichs */
+  margin-top: 38px; /* same height like h1 */
+  height: 45px; /* around star and review */
   width: 180px;
   border-radius: 20px;
 }
 
 .review_star {
-  margin-bottom: 4px; /* Höhe anpepasst mit reviews */
+  margin-bottom: 4px; /* same height like reviews */
 }
 
 .review_points {
-  margin-top: 4px; /* für gleiche Höhe wie Stern */
+  margin-top: 4px; /* same height like star */
   margin-bottom: 4px;
 }
 
 .review_comments {
-  margin-top: 4px; /* für gleiche Höhe wie Stern */
+  margin-top: 4px; /* same height like star  */
   margin-bottom: 6px;
   color: gray;
 }
@@ -104,7 +98,7 @@ h2 {
   color: white;
 }
 
-/* Klasse aus HTML-Template-Funktion um Gerichte auf Website anzeigen zu lassen */
+
 .dishes {
   background: rgb(253, 234, 220);
   border-radius: 20px;
@@ -123,7 +117,7 @@ h2 {
 .space_between {
   display: flex;
   justify-content: space-between;
-  width: 100%; /* um vollen Platz im Container zu nutzen */
+  width: 100%; /* full-width in container */
 }
 
 .name_description {
@@ -149,8 +143,6 @@ footer {
   background: #e76c1f;
   height: 10dvh;
   width: auto;
-  max-width: 1920px;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,7 +206,7 @@ footer {
 @media (max-width: 1200px) {
   .reviews {
     margin-top: 34px;
-    height: 40px; /* Umrandung des Stern und review Bereichs */
+    height: 40px; 
     width: 140px;
   }
 }
@@ -297,7 +289,7 @@ footer {
   .cover_photo {
     height: 40dvh;
   }
-  /* Zeilenumbruch durch CSS */
+  /* linebreak with CSS */
   .linebreak::after {
     content: "\A";
     white-space: pre;

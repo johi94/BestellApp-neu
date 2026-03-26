@@ -5,10 +5,11 @@ const orderFoodRef = document.getElementById("food_ordered");
 const showBasketRef = document.getElementById("basket_wrapper");
 const basketBtnRef = document.getElementById("show_basket_btn");
 
-function renderMyDishes() {
   tacosRef.innerHTML = "";
   burritosRef.innerHTML = "";
   dessertsRef.innerHTML = "";
+
+function renderMyDishes() {
 
   for (
     let indexMyDishes = 0;
@@ -37,7 +38,7 @@ function renderMyDishes() {
 function dishToBasket(indexMyDishes) {
   const dish = myDishes[indexMyDishes];
 
-  // Prüfen on Gericht im Warenkorb ist, um dieses dann zu erhöhen
+  // proof if dish is in basket, to add amount, and not the dish again
 
   const dishExist = myBasket.find((content) => content.name === dish.name);
 
@@ -139,13 +140,13 @@ window.addEventListener("keydown", (e) => {
 
 window.addEventListener("mousedown", (e) => {
   if (showBasketRef.style.display === "flex") {
-    // Prüfen, ob der Klick NICHT im Warenkorb war
+    // proof, click was not in basket
     const clickedInsideBasket = showBasketRef.contains(e.target);
-    // Prüfen, ob der Klick NICHT auf dem Öffnen-Button war
+    // proof, click was not on open basket button
     const clickedOnBtn = basketBtnRef.contains(e.target);
-    // Prüfen, ob auf einen "Add to basket" Button geklickt wurde
+    // proof, click was on "Add to basket" Button 
     const clickedOnAddBtn = e.target.classList.contains("add-to-basket-btn");
-    // Prüfen, ob der Klick auf dem Dialog-Feld war
+    // proof, click was on dialog
     const clickedOnDialog = orderFoodRef.contains(e.target);
 
     if (
@@ -189,18 +190,18 @@ orderFoodRef.addEventListener("click", (e) => {
 
 // #end region Dialog
 
-// Warenkorb wieder anzeigen lassen, wenn in Mobilansicht geschlossen, ab Bildschirmbreite > 750px
+// show basket again, when getting over 1000px after being closed in mobile view > 1000px
 
 window.addEventListener("resize", () => {
-  // Wenn der Bildschirm breiter als 750px wird (Desktop-Ansicht)
-  if (window.innerWidth > 750) {
-    // entfernen von "display: none" des JavaScript
+  // if desktop has more then 1000px in width
+  if (window.innerWidth > 1000) {
+    // quits "display: none" of JavaScript
     showBasketRef.style.display = "flex";
-    // Scrollen auf der Hauptseite wieder möglich
+    // enables scrolling
     document.body.style.overflow = "visible";
   } else {
     if (showBasketRef.style.display === "flex" && document.body.style.overflow === "visible") {
-      showBasketRef.style.display = "none"; // Scrollen wieder sperren
+      showBasketRef.style.display = "none"; 
     }
   }
 });

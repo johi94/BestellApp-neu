@@ -1,24 +1,18 @@
-/* Style für den Warenkorb */
 
-/* Schließt Menü und Warenkorb in sich ein */
 .menu_wrapper {
   display: flex;
   flex-direction: row;
-  flex: 1; /* flex: 1; schon in main vergeben, schauen ob es funktioniert/ nötig ist an dieser Stelle */
+  flex: 1; 
 }
 
-/* Inhalte des Menüs / Überschrift der Gerichte und Gerichte / Speisekarte */
 .menu_meals_and_dishes_wrapper {
   width: calc(100% - 450px);
 }
 
-/* Der Warenkorb-Wrapper */
 #basket_wrapper {
   width: 450px;
   flex: 1;
 }
-
-/* Der Warenkorb */
 
 .basket {
   background: rgb(54, 53, 52);
@@ -26,9 +20,9 @@
   height: 800px;
   border-radius: 20px;
   text-align: center;
-  margin-top: 40px; /* auf gleicher Höhe wie .meals Container der Gerichtüberschrift */
-  position: sticky; /* Warenkorb klebt an der Seite / bewegt sich beim scrollen mit */
-  top: 0; /* Position ab der Warenkorb an der Seite klebt */
+  margin-top: 40px; /* same height like .meals container of dishes headline */
+  position: sticky; /* no scrolling away from basket is sticky */
+  top: 0; /* Position from where the basket is sticky */
   display: flex;
   flex-direction: column;
 }
@@ -38,8 +32,8 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  flex: 1; /* Inhalt im Warenkorb nimmt sich den verfügbaren Platz  */
-  overflow-y: auto; /* erzeugt eine Scrollbar für den Inhalt im Warenkorb */
+  flex: 1; /* content in basket takes posible space  */
+  overflow-y: auto; /* scrolling in basket */
 }
 
 h4 {
@@ -47,7 +41,6 @@ h4 {
   padding-top: 16px;
 }
 
-/* Hier werden die Gerichte angezeigt, welche in den Warenkorb geladen wurden, selber Hintergrund wie im Menü */
 .dishes_basket {
   background: rgb(253, 234, 220);
   height: 150px;
@@ -57,7 +50,7 @@ h4 {
   border-radius: 20px;
 }
 
-/* Buttons und Preis im Warenkorb auf gleicher Höhe */
+/* Buttons and price same height in basket */
 .basket_btns_price {
   display: flex;
   justify-content: center;
@@ -68,7 +61,7 @@ h4 {
 .basket_delete_price {
   display: flex;
   justify-content: space-between;
-  width: 100%; /* um Platz zu nutzen, damit space-between zwischen delete_btn und price funktioniert */
+  width: 100%; /* use space, for functioning of space-between between delete_btn and price */
 }
 
 #delivery_cost {
@@ -94,7 +87,7 @@ h4 {
   margin: 16px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
   .menu_meals_and_dishes_wrapper {
     width: 100%;
   }
