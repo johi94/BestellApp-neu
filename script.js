@@ -6,7 +6,7 @@ const showBasketRef = document.getElementById("basket_wrapper");
 const basketBtnRef = document.getElementById("show_basket_btn");
 
 function renderMyDishes() {
-  clearmyDishes();
+  clearMyDishes();
 
   for (let i = 0; i < myDishes.length; i++) {
     const dish = myDishes[i];
@@ -18,7 +18,7 @@ function renderMyDishes() {
   }
 }
 
-function clearmyDishes() {
+function clearMyDishes() {
   tacosRef.innerHTML = "";
   burritosRef.innerHTML = "";
   dessertsRef.innerHTML = "";
