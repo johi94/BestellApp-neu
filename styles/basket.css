@@ -51,7 +51,7 @@ h4 {
 .dishes_basket {
   background: rgb(253, 234, 220);
   height: 150px;
-  width: 418px;
+  width: calc(100% - 32px);
   margin: 16px;
   padding: 16px;
   border-radius: 20px;
@@ -82,6 +82,7 @@ h4 {
 }
 
 .seperator {
+  width: calc(100% - 32px);
   background: antiquewhite;
   width: 418px;
   height: 1px;
