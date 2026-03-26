@@ -6,30 +6,22 @@ const showBasketRef = document.getElementById("basket_wrapper");
 const basketBtnRef = document.getElementById("show_basket_btn");
 
 function renderMyDishes() {
+  clearmyDishes();
+
+  for (let i = 0; i < myDishes.length; i++) {
+    const dish = myDishes[i];
+    const template = getDishesTemplate(i);
+    
+    if (dish.category === "taco") tacosRef.innerHTML += template;
+    if (dish.category === "burrito") burritosRef.innerHTML += template;
+    if (dish.category === "dessert") dessertsRef.innerHTML += template;
+  }
+}
+
+function clearmyDishes() {
   tacosRef.innerHTML = "";
   burritosRef.innerHTML = "";
   dessertsRef.innerHTML = "";
-
-  for (
-    let indexMyDishes = 0;
-    indexMyDishes < myDishes.length;
-    indexMyDishes++
-  ) {
-    const dish = myDishes[indexMyDishes];
-    const Dishtemplate = getDishesTemplate(indexMyDishes);
-
-    if (dish.category === "taco") {
-      tacosRef.innerHTML += Dishtemplate;
-    }
-
-    if (dish.category === "burrito") {
-      burritosRef.innerHTML += Dishtemplate;
-    }
-
-    if (dish.category === "dessert") {
-      dessertsRef.innerHTML += Dishtemplate;
-    }
-  }
 }
 
 // #start region dish to basket / basket-functions
