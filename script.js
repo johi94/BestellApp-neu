@@ -165,7 +165,7 @@ function openOrderFoodDialog() {
   orderFoodRef.classList.add("opened");
   document.body.style.overflow = "hidden";
   deleteAllDishesWithOrder();
-  if (window.innerWidth <= 750) {
+  if (window.innerWidth <= 1000) {
     closeBasket();
   }
 }
