@@ -136,8 +136,16 @@ function closeBasket() {
 });
 
 window.addEventListener("mousedown", (e) => {
-    if (showBasketRef.style.display === 'flex') {
-        if (!showBasketRef.contains(e.target) && !basketBtnRef.contains(e.target)) {
+   if (showBasketRef.style.display === 'flex') {
+        
+        // Prüfen, ob der Klick NICHT im Warenkorb war
+        const clickedInsideBasket = showBasketRef.contains(e.target);
+        // Prüfen, ob der Klick NICHT auf dem Öffnen-Button war
+        const clickedOnBtn = basketBtnRef.contains(e.target);
+        // Prüfen, ob der Klick auf dem Dialog-Feld war
+        const clickedOnDialog = orderFoodRef.contains(e.target);
+
+        if (!clickedInsideBasket && !clickedOnBtn && !clickedOnDialog) {
             closeBasket();
         }
     }
@@ -153,6 +161,9 @@ function openOrderFoodDialog() {
   orderFoodRef.classList.add("opened");
   document.body.style.overflow = "hidden";
   deleteAllDishesWithOrder();
+  if (window.innerWidth <= 750) {
+    closeBasket();
+  }
 }
 
 function closeOrderFoodDialog() {
@@ -171,7 +182,20 @@ orderFoodRef.addEventListener("click", (e) => {
 
 // #end region Dialog
 
+// Warenkorb wieder anzeigen lassen, wenn in Mobilansicht geschlossen, ab Bildschirmbreite > 750px
 
-
+window.addEventListener('resize', () => {
+  // Wenn der Bildschirm breiter als 750px wird (Desktop-Ansicht)
+  if (window.innerWidth > 750) {
+    // entfernen von "display: none" des JavaScript
+    showBasketRef.style.display = 'flex'; 
+    // Scrollen auf der Hauptseite wieder möglich
+    document.body.style.overflow = "visible";
+  } else {
+    if (showBasketRef.style.display === 'flex') {
+      document.body.style.overflow = "hidden"; // Scrollen wieder sperren
+    }
+  }
+});
 
 

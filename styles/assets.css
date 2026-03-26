@@ -51,6 +51,7 @@
 
 .add-to-basket-btn:hover {
   cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .basket_btn {
@@ -64,6 +65,7 @@
 
 .basket_btn:hover {
   cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .basket_delete_btn {
@@ -77,6 +79,7 @@
 
 .basket_delete_btn:hover {
   cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 #buy_now_btn {
