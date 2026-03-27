@@ -1,85 +1,90 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Delivery Service</title>
-   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-    <script src="./script.js" defer></script>
-    <script src="./scripts/database.js" defer></script>
+<script src="./script.js" defer></script>
+  <script src="./scripts/database.js" defer></script>
     <script src="./scripts/templates.js" defer></script>
-    <link rel="shortcut icon" href="./assets/img/restaurant_logo_1.jpg">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./styles/standard.css">
+<link rel="shortcut icon" href="./assets/img/restaurant_logo_1.jpg">
+  <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="./styles/standard.css">
     <link rel="stylesheet" href="./styles/fonts.css">
-    <link rel="stylesheet" href="./styles/assets.css">
-    <link rel="stylesheet" href="./styles/basket.css">
-  </head>
-  <body onload="renderMyDishes()">  
-    <header>
-        <img class="bestell_app_icon" src="./assets/icons/Capa 1.png" alt="BestellApp Icon">
-        <img class="bestell_app_menu_icon" src="./assets/icons/menu_stripes_header.svg" alt="BestellApp Menü Icon" >
-    </header>
-    <div id="overlay" onclick="closeBasket()"></div>
-    <main>
-<section class="cover_photo">
+     <link rel="stylesheet" href="./styles/assets.css">
+      <link rel="stylesheet" href="./styles/basket.css">
+</head>
+<body onload="renderMyDishes()">  
+  <header>
+    <div class="content_width">
+      <img class="bestell_app_icon" src="./assets/icons/Capa 1.png" alt="BestellApp Icon">
+      <img class="bestell_app_menu_icon" src="./assets/icons/menu_stripes_header.svg" alt="BestellApp Menü Icon" >
+    </div>
+  </header>
+  <div id="overlay" onclick="closeBasket()"></div>
+<main>
+ <section class="cover_photo">
  </section>
-<section class="restaurant_logo_section">
- <img class="restaurant_logo" src="./assets/img/restaurant_logo_1.jpg" alt="Restaurant_Logo">
-</section>
-<section class="restaurant_name_and_decription">
+ <section class="restaurant_logo_section">
+  <img class="restaurant_logo" src="./assets/img/restaurant_logo_1.jpg" alt="Restaurant_Logo">
+ </section>
+ <section class="restaurant_name_and_decription">
   <div class="restaurant_name_and_reviews">
-  <h1>La casita mexicana</h1>
-  <div class="reviews"> <p class="review_star">&#9733</p><p class="review_points">4,5</p><p class="review_comments">(718)</p></div>
-</div>
+   <h1>La casita mexicana</h1>
+   <div class="reviews"> <p class="review_star">&#9733</p><p class="review_points">4,5</p><p class="review_comments">(718)</p>
+   </div>
+ </div>
   <p class="restaurant_description">Authentic mexican food, made with love and a lot of salsa</p>
-</section>
-<section class="basket_btn_wrapper">
+ </section>
+ <section class="basket_btn_wrapper">
   <button onclick="showBasket()" id="show_basket_btn"><img src="./assets/icons/basket_icon.svg" alt="Warenkorb Button" class="show_basket_icon"></button>
-</section>
-<div class="menu_wrapper"> <!-- Wrapper for sticky basket / includes menu and basket -->
-  <section class="menu_meals_and_dishes_wrapper"> <!-- Wrapper for dishes and categories of dishes -->
-   <section class="menu_section">
-    <div class="meals"><img class="taco_icon" src="./assets/icons/taco_icon.svg" alt="Taco Icon"><h2>Tacos</h2></div>
-    <div id="content_taco">
-    </div>
-    <div class="meals"><img class="burrito_icon" src="./assets/icons/burrito_icon.svg" alt="Burrito Icon"><h2>Burritos</h2></div>
-    <div id="content_burrito">
-    </div>
-    <div class="meals"><img class="dessert_icon" src="./assets/icons/dessert_icon.svg" alt="Dessert Icon"><h2>Desserts</h2></div>
-    <div id="content_dessert">
-    </div>
-   </section>
-    </section> <!-- Wrapper for dishes and categories of dishes-->
-<section id="basket_wrapper">
+ </section>
+  <div class="menu_wrapper"> <!-- Wrapper for sticky basket / includes menu and basket -->
+ <section class="menu_meals_and_dishes_wrapper"> <!-- Wrapper for dishes and categories of dishes -->
+    <section class="menu_section">
+     <div class="meals"><img class="taco_icon" src="./assets/icons/taco_icon.svg" alt="Taco Icon"><h2>Tacos</h2></div>
+      <div id="content_taco">
+      </div>
+     <div class="meals"><img class="burrito_icon" src="./assets/icons/burrito_icon.svg" alt="Burrito Icon"><h2>Burritos</h2>
+     </div>
+      <div id="content_burrito">
+      </div>
+     <div class="meals"><img class="dessert_icon" src="./assets/icons/dessert_icon.svg" alt="Dessert Icon"><h2>Desserts</h2>
+     </div>
+      <div id="content_dessert">
+      </div>
+  </section>
+ </section> <!-- Wrapper for dishes and categories of dishes-->
+ <section id="basket_wrapper">
   <div class="basket">
     <button onclick="closeBasket()" class="close_basket_mobile">X</button><h4>Your Basket</h4>
-  <div id="content_basket">
+   <div id="content_basket">
    </div>
-  <div id="delivery_cost"></div>
-  <div class="seperator"></div>
-  <p id="dishes_sum"></p>
-  <button onclick="openOrderFoodDialog()" id="buy_now_btn">Buy now</button>
-   </div>
-    </section>
-     </div> <!-- Wrapper for sticky basket / includes menu and basket -->
-      </main>
+   <div id="delivery_cost"></div>
+   <div class="seperator"></div>
+   <p id="dishes_sum"></p>
+   <button onclick="openOrderFoodDialog()" id="buy_now_btn">Buy now</button>
+  </div>
+  </section>
+    </div> <!-- Wrapper for sticky basket / includes menu and basket -->
+</main>
 <footer>
   <p class="copyright_footer">&#169 2026 "La casita mexicana" <span class="linebreak"></span> designed by Jonas Hildebrand</p>
 </footer>
-    <dialog id="food_ordered">
-     <button onclick="closeOrderFoodDialog()" class="dialog_btn">x</button>
-      <header class="dialog_header">
-       <h5>Your little piece of Mexico is on the way</h5>
-      </header>
-<section>
-  <img class="mexican_flag" src="./assets/icons/mexican_flag_icon.png" alt="Mexikanische Flagge">
-  <p class="dialog_text">¡Buen provecho!</p>
-</section>
+  <dialog id="food_ordered">
+   <button onclick="closeOrderFoodDialog()" class="dialog_btn">x</button>
+    <header class="dialog_header">
+      <h5>Your little piece of Mexico is on the way</h5>
+    </header>
+     <section>
+      <img class="mexican_flag" src="./assets/icons/mexican_flag_icon.png" alt="Mexikanische Flagge">
+      <p class="dialog_text">¡Buen provecho!</p>
+     </section>
   </dialog>
-  </body>
+</body>
 </html>
 
 

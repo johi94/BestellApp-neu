@@ -2,8 +2,14 @@ header {
   background: #e76c1f;
   height: 10dvh;
   width: auto;
-  display: flex;
+ 
+}
+
+.content_width {
+ display: flex;
   justify-content: space-between;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 main {
@@ -147,6 +153,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .copyright_footer {
