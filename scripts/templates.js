@@ -5,22 +5,22 @@ function getDishesTemplate(indexMyDishes) {
   const count = myBasket.find((item) => item.name === dish.name)?.amount || 0;
 
   return /*html*/ `
-    <article class="dishes">
-     <img src="${dish.image}" alt="Cover von ${dish.name}" class="dish-img" />
-      <div class="space_between">
-        <div class="name_description">
-         <h3>${dish.name}</h3>
-          <p class="dish_description">${dish.description}</p>
-        </div>
-          <div class="price_btn_dishes">
-            <p class="dish_price">${dish.price.toFixed(2).replace(".", ",")} €</p>
-             <div class="btn-container">
-              <button class="add-to-basket-btn" onclick="dishToBasket(${indexMyDishes})">Add to basket
-               </button>
-                ${count > 0 ? `<span class="dish-counter">${count}</span>` : ""}
-             </div>
-         </div>
+  <article class="dishes">
+    <img src="${dish.image}" alt="Cover von ${dish.name}" class="dish-img" />
+     <div class="space_between">
+      <div class="name_description">
+        <h3>${dish.name}</h3>
+        <p class="dish_description">${dish.description}</p>
       </div>
+      <div class="price_btn_dishes">
+        <p class="dish_price">${dish.price.toFixed(2).replace(".", ",")} €</p>
+        <div class="btn-container">
+        <button class="add-to-basket-btn" onclick="dishToBasket(${indexMyDishes})">Add to basket
+        </button>
+        ${count > 0 ? `<span class="dish-counter">${count}</span>` : ""}
+      </div>
+      </div>
+    </div>
   </article>`;
 }
 
